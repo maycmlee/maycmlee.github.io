@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[May's Journey into Web Programming]]></title>
+  <link href="http://maycmlee.github.io/atom.xml" rel="self"/>
+  <link href="http://maycmlee.github.io/"/>
+  <updated>2015-09-29T08:54:01-04:00</updated>
+  <id>http://maycmlee.github.io/</id>
+  <author>
+    <name><![CDATA[May Lee]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My First Post on Octopress]]></title>
+    <link href="http://maycmlee.github.io/blog/2015/09/28/my-first-post-on-octopress/"/>
+    <updated>2015-09-28T17:55:42-04:00</updated>
+    <id>http://maycmlee.github.io/blog/2015/09/28/my-first-post-on-octopress</id>
+    <content type="html"><![CDATA[<p>Hello =D</p>
+]]></content>
+  </entry>
+  
+</feed>
