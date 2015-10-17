@@ -1,152 +1,245 @@
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>May's Journey into Web Programming</title>
-  <meta name="author" content="May Lee">
+	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
+	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<meta charset="utf-8">
+	<title>  | My Beginnings as a Web Developer</title>
 
-  
-  <meta name="description" content="Hello =D
-">
-  
+<meta name="author" content="May Lee"> 
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Beginning as a Web Developer"> <meta name="keywords" content="">
 
-  
-  <link rel="canonical" href="http://maycmlee.github.io/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="May's Journey into Web Programming" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+	<link href="/atom.xml" rel="alternate" title="My Beginnings as a Web Developer" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery.fancybox.pack.js"></script>
 
+<script language="Javascript" type="text/javascript">
+$(document).ready(
+  function() {
+    (function($) {
+      $(".fancybox[data-content-id]").each(function() {
+        this.href = $(this).data('content-id');
+      });
+      $(".fancybox").fancybox({
+        beforeLoad: function() {
+          var el, 
+              id = $(this.element).data('title-id');
+
+          if (id) {
+            el = $('#' + id);
+
+            if (el.length) {
+              this.title = el.html();
+            }
+          }
+          if ($(this).data('content')) {
+            this.content = $(this).data('content');
+          }
+        },
+        helpers: {
+          title: {
+            type: 'inside'
+          }
+        }
+      });
+    })(jQuery);
+  }
+);
+</script>
+
+	
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">May's Journey into Web Programming</a></h1>
-  
-    <h2>My beginnings as a web developer.</h2>
-  
-</hgroup>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">My Beginnings as a Web Developer</a></h1>
+<h4></h4>
+<nav id="main-nav"><ul>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/portfolio">Portfolio</a></li>
+	<li><a href="/archives">Archive</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul>
+	<li><a href="/">Blog</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/portfolio">Portfolio</a></li>
+	<li><a href="/archives">Archive</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="https://www.google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:maycmlee.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+
+	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2015/10/17/what-it-all-comes-down-to-dot-dot-dot-binary-code/">
+		
+			What It All Comes Down to...Binary Code</a>
+	</h2>
+	<div class="entry-content">
+		<p>While I was working on the &ldquo;Secret Handshake&rdquo; lab, I became interested in binary codes.  I knew vaguely that computers at the lowest level operated on a binary system, but I didn&rsquo;t quite understand what that meant. How does a computer understand what we are asking for when run a program?  I decided to investigate into this.</p>
+
+<p>First I found out how to convert our regular decimal numbers into binary code.  Our counting system is a base-ten system, meaining we have digits from 0 to 9.  The binary number system or base-two contains only 0 and 1.  To convert a number from base-ten to base-two:</p>
+
+<p>14/2 = 7 remainder 0
+7/2  = 3 remainder 1
+3/2  = 1 remainder 1
+&frac12;  = 0 remainder 1</p>
+
+<p>1110 in base-2 = 14 in base-10</p>
+
+<p>So that is how a computer converts numbers into what it can understand, the binary system.</p>
+
+<p>But what about the alphabet and other symbols such as #, &amp;, % and etcs?</p>
+
+<p>That&rsquo;s where the ASCII (American Standard Code for Information Interchange) table comes in.  The ASCI table converts the upper case, lower case alphabet and symbols into a decimal number.</p>
+
+<p><img src="../public/images/ASCIItable.jpg"></p>
+
+<p>From the decimal number the computer can then convert it into a binary number.</p>
+
+<p>For example, let&rsquo;s take the capital letter &ldquo;A&rdquo;.  Looking at the ASCII table we see that it is 65.  Converting 65 into a binary number&hellip;</p>
+
+<p>65/2 = 1
+32/2 = 0
+16/2 = 0
+8/2  = 0
+4/2  = 0
+2/2  = 0
+1    = 1</p>
+
+<p>Binary code for A is 1000001.</p>
+
+<p>Hello World
+01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100</p>
+
+<p>How does this all come together?  Computers, in terms of their hardware just toggles between, being on or off.  They are really only a collection of on/off switches (transistors) so it&rsquo;s through the 0&rsquo;s and 1&rsquo;s that they know what data to store and what to execute.</p>
+
+<p><a href="http://binarytranslator.com/">http://binarytranslator.com/</a></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
   
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="sitesearch" value="maycmlee.github.io">
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/09/28/my-first-post-on-octopress/">My First Post on Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
+<time datetime="2015-10-17T18:24:03-04:00" pubdate data-updated="true"></time></div>
+	
 
+<div class="tags">
 
-<time class='entry-date' datetime='2015-09-28T17:55:42-04:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>5:55 pm</span></time>
-        
-      </p>
-    
-  </header>
+	<a class='category' href='/blog/categories/flatiron-school/'>flatiron&nbsp;school</a>
 
-
-  <div class="entry-content"><p>Hello =D</p>
 </div>
-  
+
+
+	
+</div></article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2015/09/28/my-first-post-on-octopress/">
+		
+			My First Blog Post</a>
+	</h2>
+	<div class="entry-content">
+		<p>Hello =D</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
   
 
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+<time datetime="2015-09-28T17:55:42-04:00" pubdate data-updated="true"></time></div>
+	
+
+<div class="tags">
+
+	<a class='category' href='/blog/categories/flatiron-school/'>flatiron&nbsp;school</a>
+
 </div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
+
+
+	
+</div></article>
+
+<nav id="pagenavi">
     
-      <li class="post">
-        <a href="/blog/2015/09/28/my-first-post-on-octopress/">My First Post on Octopress</a>
-      </li>
     
-  </ul>
-</section>
+    <div class="center"><a href="/archives">Blog Archives</a></div>
+</nav></div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
 
+    May Lee
 
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2015 - May Lee -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
+<br>
+Powered by Octopress.
 </footer>
-  
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
 
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 

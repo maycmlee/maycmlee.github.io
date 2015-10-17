@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[May's Journey into Web Programming]]></title>
+  <title><![CDATA[My Beginnings as a Web Developer]]></title>
   <link href="http://maycmlee.github.io/atom.xml" rel="self"/>
   <link href="http://maycmlee.github.io/"/>
-  <updated>2015-09-29T08:54:01-04:00</updated>
+  <updated>2015-10-17T19:23:03-04:00</updated>
   <id>http://maycmlee.github.io/</id>
   <author>
     <name><![CDATA[May Lee]]></name>
@@ -14,7 +14,54 @@
 
   
   <entry>
-    <title type="html"><![CDATA[My First Post on Octopress]]></title>
+    <title type="html"><![CDATA[What it all comes down to...Binary Code]]></title>
+    <link href="http://maycmlee.github.io/blog/2015/10/17/what-it-all-comes-down-to-dot-dot-dot-binary-code/"/>
+    <updated>2015-10-17T18:24:03-04:00</updated>
+    <id>http://maycmlee.github.io/blog/2015/10/17/what-it-all-comes-down-to-dot-dot-dot-binary-code</id>
+    <content type="html"><![CDATA[<p>While I was working on the &ldquo;Secret Handshake&rdquo; lab, I became interested in binary codes.  I knew vaguely that computers at the lowest level operated on a binary system, but I didn&rsquo;t quite understand what that meant. How does a computer understand what we are asking for when run a program?  I decided to investigate into this.</p>
+
+<p>First I found out how to convert our regular decimal numbers into binary code.  Our counting system is a base-ten system, meaining we have digits from 0 to 9.  The binary number system or base-two contains only 0 and 1.  To convert a number from base-ten to base-two:</p>
+
+<p>14/2 = 7 remainder 0
+7/2  = 3 remainder 1
+3/2  = 1 remainder 1
+&frac12;  = 0 remainder 1</p>
+
+<p>1110 in base-2 = 14 in base-10</p>
+
+<p>So that is how a computer converts numbers into what it can understand, the binary system.</p>
+
+<p>But what about the alphabet and other symbols such as #, &amp;, % and etcs?</p>
+
+<p>That&rsquo;s where the ASCII (American Standard Code for Information Interchange) table comes in.  The ASCI table converts the upper case, lower case alphabet and symbols into a decimal number.</p>
+
+<p><img src="../public/images/ASCIItable.jpg"></p>
+
+<p>From the decimal number the computer can then convert it into a binary number.</p>
+
+<p>For example, let&rsquo;s take the capital letter &ldquo;A&rdquo;.  Looking at the ASCII table we see that it is 65.  Converting 65 into a binary number&hellip;</p>
+
+<p>65/2 = 1
+32/2 = 0
+16/2 = 0
+8/2  = 0
+4/2  = 0
+2/2  = 0
+1    = 1</p>
+
+<p>Binary code for A is 1000001.</p>
+
+<p>Hello World
+01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100</p>
+
+<p>How does this all come together?  Computers, in terms of their hardware just toggles between, being on or off.  They are really only a collection of on/off switches (transistors) so it&rsquo;s through the 0&rsquo;s and 1&rsquo;s that they know what data to store and what to execute.</p>
+
+<p><a href="http://binarytranslator.com/">http://binarytranslator.com/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My First Blog Post]]></title>
     <link href="http://maycmlee.github.io/blog/2015/09/28/my-first-post-on-octopress/"/>
     <updated>2015-09-28T17:55:42-04:00</updated>
     <id>http://maycmlee.github.io/blog/2015/09/28/my-first-post-on-octopress</id>
