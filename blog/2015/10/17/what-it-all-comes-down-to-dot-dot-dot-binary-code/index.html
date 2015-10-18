@@ -98,43 +98,59 @@ $(document).ready(
 
 	<div id="content" class="inner"><article class="post">
 	<h2 class="title">What It All Comes Down to...Binary Code</h2>
-	<div class="entry-content"><p>While I was working on the &ldquo;Secret Handshake&rdquo; lab, I became interested in binary codes.  I knew vaguely that computers at the lowest level operated on a binary system, but I didn&rsquo;t quite understand what that meant. How does a computer understand what we are asking for when run a program?  I decided to investigate into this.</p>
+	<div class="entry-content"><p>While I was working on the &ldquo;Secret Handshake&rdquo; lab, I became interested in binary codes.  I knew vaguely that computers at the lowest level operated on a binary system, but I didn&rsquo;t quite understand what that meant. How does a computer understand what we are asking for when we run a program?  I decided to do a little investigation.</p>
 
-<p>First I found out how to convert our regular decimal numbers into binary code.  Our counting system is a base-ten system, meaining we have digits from 0 to 9.  The binary number system or base-two contains only 0 and 1.  To convert a number from base-ten to base-two:</p>
+<p>First, I found out that a computer, in terms of its hardward, can actually only understand the states of &lsquo;on&rsquo; and &lsquo;off&rsquo;.  So everything a computer does is based on a combination of turning switches (transistors) on and off. These on and off states are represented by the binary code of 0&rsquo;s and 1&rsquo;s.</p>
 
-<p>14/2 = 7 remainder 0
-7/2  = 3 remainder 1
-3/2  = 1 remainder 1
-&frac12;  = 0 remainder 1</p>
+<p>So what is the binary number system?  Our counting system is a base-ten system, meaning we have digits from 0 to 9.  The binary number system or base-two contains only 0 and 1.</p>
 
-<p>1110 in base-2 = 14 in base-10</p>
+<p>So how do we convert our regular decimal numbers into binary code?</p>
 
-<p>So that is how a computer converts numbers into what it can understand, the binary system.</p>
+<p>For example, how do we convert 14 into binary code?</p>
 
-<p>But what about the alphabet and other symbols such as #, &amp;, % and etcs?</p>
+<p>14/2 = 7 remainder <b>0</b></p>
 
-<p>That&rsquo;s where the ASCII (American Standard Code for Information Interchange) table comes in.  The ASCI table converts the upper case, lower case alphabet and symbols into a decimal number.</p>
+<p>7/2&nbsp;&nbsp; = 3 remainder <b>1</b></p>
 
-<p><img src="../public/images/ASCIItable.jpg"></p>
+<p>3/2&nbsp;&nbsp; = 1 remainder <b>1</b></p>
+
+<p>1&#47;2&nbsp;&nbsp; = 0 remainder <b>1</b></p>
+
+<p><b>1110</b> in binary = <b>14</b> in our decimal counting system.</p>
+
+<p>But what about the alphabet and other symbols such as #, &amp;, % and etc?</p>
+
+<p>That&rsquo;s where the ASCII (American Standard Code for Information Interchange) table comes in.  The ASCII table converts the upper case, lower case alphabet and symbols into a decimal number.</p>
+
+<p><img src="images/asciitable.png"></p>
+
+<p>Another <a href="http://www.ascii.cl/htmlcodes.htm" target=_blank>ASCII table</a>.</p>
 
 <p>From the decimal number the computer can then convert it into a binary number.</p>
 
 <p>For example, let&rsquo;s take the capital letter &ldquo;A&rdquo;.  Looking at the ASCII table we see that it is 65.  Converting 65 into a binary number&hellip;</p>
 
-<p>65/2 = 1
-32/2 = 0
-16/2 = 0
-8/2  = 0
-4/2  = 0
-2/2  = 0
-1    = 1</p>
+<p>65/2 = <b>1</b></p>
 
-<p>Binary code for A is 1000001.</p>
+<p>32/2 = <b>0</b></p>
 
-<p>Hello World
-01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100</p>
+<p>16/2 = <b>0</b></p>
 
-<p>How does this all come together?  Computers, in terms of their hardware just toggles between, being on or off.  They are really only a collection of on/off switches (transistors) so it&rsquo;s through the 0&rsquo;s and 1&rsquo;s that they know what data to store and what to execute.</p>
+<p>8/2&nbsp;&nbsp;  = <b>0</b></p>
+
+<p>4/2&nbsp;&nbsp;  = <b>0</b></p>
+
+<p>2/2&nbsp;&nbsp;  = <b>0</b></p>
+
+<p>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <b>1</b></p>
+
+<p>Binary code for &ldquo;A&rdquo; is <b>1000001</b>.</p>
+
+<p>And the binary code for a string like &lsquo;Hello World&rsquo; is&hellip;</p>
+
+<p>01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100</p>
+
+<p>I found it fascinating that everything we input into a computer can all come down to just a long long string of 0&rsquo;s and 1&rsquo;s.</p>
 
 <p><a href="http://binarytranslator.com/">http://binarytranslator.com/</a></p>
 </div>
