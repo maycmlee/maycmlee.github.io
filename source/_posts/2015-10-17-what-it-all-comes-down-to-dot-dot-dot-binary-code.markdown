@@ -6,43 +6,59 @@ comments: true
 categories: Flatiron&nbsp;School
 ---
 
-While I was working on the "Secret Handshake" lab, I became interested in binary codes.  I knew vaguely that computers at the lowest level operated on a binary system, but I didn't quite understand what that meant. How does a computer understand what we are asking for when run a program?  I decided to investigate into this.
+While I was working on the "Secret Handshake" lab, I became interested in binary codes.  I knew vaguely that computers at the lowest level operated on a binary system, but I didn't quite understand what that meant. How does a computer understand what we are asking for when we run a program?  I decided to do a little investigation.
 
-First I found out how to convert our regular decimal numbers into binary code.  Our counting system is a base-ten system, meaining we have digits from 0 to 9.  The binary number system or base-two contains only 0 and 1.  To convert a number from base-ten to base-two:
+First, I found out that a computer, in terms of its hardward, can actually only understand the states of 'on' and 'off'.  So everything a computer does is based on a combination of turning switches (transistors) on and off. These on and off states are represented by the binary code of 0's and 1's.
 
-14/2 = 7 remainder 0
-7/2  = 3 remainder 1
-3/2  = 1 remainder 1
-1/2  = 0 remainder 1
+So what is the binary number system?  Our counting system is a base-ten system, meaning we have digits from 0 to 9.  The binary number system or base-two contains only 0 and 1.  
 
-1110 in base-2 = 14 in base-10
+So how do we convert our regular decimal numbers into binary code?  
 
-So that is how a computer converts numbers into what it can understand, the binary system.
+For example, how do we convert 14 into binary code?
 
-But what about the alphabet and other symbols such as #, &, % and etcs?
+14/2 = 7 remainder <b>0</b>
 
-That's where the ASCII (American Standard Code for Information Interchange) table comes in.  The ASCI table converts the upper case, lower case alphabet and symbols into a decimal number.
+7/2&nbsp;&nbsp; = 3 remainder <b>1</b>
 
-{% img ../public/images/ASCIItable.jpg %}
+3/2&nbsp;&nbsp; = 1 remainder <b>1</b>
+
+1&#47;2&nbsp;&nbsp; = 0 remainder <b>1</b>
+
+<b>1110</b> in binary = <b>14</b> in our decimal counting system.
+
+But what about the alphabet and other symbols such as #, &, % and etc?
+
+That's where the ASCII (American Standard Code for Information Interchange) table comes in.  The ASCII table converts the upper case, lower case alphabet and symbols into a decimal number.
+
+<img src="images/asciitable.png">
+
+Another <a href="http://www.ascii.cl/htmlcodes.htm" target=_blank>ASCII table</a>.
 
 From the decimal number the computer can then convert it into a binary number.
 
 For example, let's take the capital letter "A".  Looking at the ASCII table we see that it is 65.  Converting 65 into a binary number...  
 
-65/2 = 1
-32/2 = 0
-16/2 = 0
-8/2  = 0
-4/2  = 0
-2/2  = 0
-1    = 1
+65/2 = <b>1</b>
 
-Binary code for A is 1000001.
+32/2 = <b>0</b>
 
-Hello World 
+16/2 = <b>0</b>
+
+8/2&nbsp;&nbsp;  = <b>0</b>
+
+4/2&nbsp;&nbsp;  = <b>0</b>
+
+2/2&nbsp;&nbsp;  = <b>0</b>
+
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <b>1</b>
+
+Binary code for "A" is <b>1000001</b>.
+
+And the binary code for a string like 'Hello World' is...
+
 01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100
 
-How does this all come together?  Computers, in terms of their hardware just toggles between, being on or off.  They are really only a collection of on/off switches (transistors) so it's through the 0's and 1's that they know what data to store and what to execute.
+I found it fascinating that everything we input into a computer can all come down to just a long long string of 0's and 1's.
 
 http://binarytranslator.com/
 
