@@ -50,7 +50,7 @@ For example, let's take the capital letter "A".  Looking at the ASCII table we s
 
 2/2&nbsp;&nbsp; = 1 &nbsp;&nbsp;remainder = <b>0</b>
 
-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remainder = <b>1</b>
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remainder = <b>1</b>
 
 Binary code for "A" is <b>1000001</b>.
 
