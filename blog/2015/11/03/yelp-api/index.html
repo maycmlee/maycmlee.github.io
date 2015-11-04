@@ -5,7 +5,7 @@
 	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
 	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="utf-8">
-	<title>  | My Beginnings as a Web Developer</title>
+	<title>Yelp API keys and tokens....oops  | My Beginnings as a Web Developer</title>
 
 <meta name="author" content="May Lee"> 
 
@@ -96,18 +96,9 @@ $(document).ready(
 
 </header>
 
-	<div id="content" class="inner">
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2015/11/03/yelp-api/">
-		
-			Yelp API Keys and tokens....oops</a>
-	</h2>
-	<div class="entry-content">
-		<p>For our project, we&rsquo;re using a Yelp API to help us find restaurants in a specific neighborhood.  To get access to the API we generated keys and tokens from Yelp&rsquo;s developer website.</p>
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Yelp API Keys and tokens....oops</h2>
+	<div class="entry-content"><p>For our project, we&rsquo;re using a Yelp API to help us find restaurants in a specific neighborhood.  To get access to the API we generated keys and tokens from Yelp&rsquo;s developer website.</p>
 
 <p><img src="images/yelp_secret.png"></p>
 
@@ -140,10 +131,7 @@ $(document).ready(
 <p>Our case, hopefully, was not too serious. However, there have been a number of cases where programmers who used Amazon Web Services (AWS) had mistakenly published their tokens on GitHub and ended up with large bills.  One programmer using AWS had realized his mistake five minutes after commiting his files to GitHub.  He immediately reverted his last few commits and deleted all traces of his keys from GitHub.  But the next morning he had four emails from Amazon AWS, a missed phone call from them and 140 servers running on his AWS account.  Along with a bill for $2375.  Luckily, when he explained the situation to Amazon customer support, they dropped the charges.</p>
 
 <p>You can find the full story here: <a href="http://www.devfactor.net/2014/12/30/2375-amazon-mistake/"> My $2375 Amazon EC2 Mistake.</a></p>
-
-		
-		
-	</div>
+</div>
 
 
 <div class="meta">
@@ -172,149 +160,20 @@ $(document).ready(
 	
 </div></article>
 
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2015/10/17/what-it-all-comes-down-to-dot-dot-dot-binary-code/">
-		
-			What It All Comes Down to...Binary Code</a>
-	</h2>
-	<div class="entry-content">
-		<p>While I was working on the &ldquo;Secret Handshake&rdquo; lab, I became interested in binary codes.  I knew vaguely that computers at the lowest level operated on a binary system, but I didn&rsquo;t quite understand what that meant. How does a computer understand what we are asking for when we run a program?  I decided to do a little investigation.</p>
-
-<p>First, I found out that a computer, in terms of its hardware, can actually only understand the states of &lsquo;on&rsquo; and &lsquo;off&rsquo;.  So everything a computer does is based on a combination of turning switches (transistors) on and off. These on and off states are represented by the binary code of 0&rsquo;s and 1&rsquo;s.</p>
-
-<p>So what is the binary number system?  Our counting system is a base-ten system, meaning we have digits from 0 to 9.  The binary number system or base-two contains only 0 and 1.</p>
-
-<p>So how do we convert our regular decimal numbers into binary code?</p>
-
-<p>For example, how do we convert 14 into binary code?</p>
-
-<p>14/2 = 7 remainder <b>0</b></p>
-
-<p>7/2&nbsp;&nbsp; = 3 remainder <b>1</b></p>
-
-<p>3/2&nbsp;&nbsp; = 1 remainder <b>1</b></p>
-
-<p>1&#47;2&nbsp;&nbsp; = 0 remainder <b>1</b></p>
-
-<p><b>1110</b> in binary = <b>14</b> in our decimal counting system.</p>
-
-<p>But what about the alphabet and other symbols such as #, &amp;, % and etc?</p>
-
-<p>That&rsquo;s where the ASCII (American Standard Code for Information Interchange) table comes in.  The ASCII table converts the upper case, lower case alphabet and symbols into a decimal number.</p>
-
-<p><img src="images/asciitable.png"></p>
-
-<p>Another <a href="http://www.ascii.cl/htmlcodes.htm" target=_blank>ASCII table</a>.</p>
-
-<p>From the decimal number the computer can then convert it into a binary number.</p>
-
-<p>For example, let&rsquo;s take the capital letter &ldquo;A&rdquo;.  Looking at the ASCII table we see that it is 65.  Converting 65 into a binary number&hellip;</p>
-
-<p>65/2 = 32 remainder = <b>1</b></p>
-
-<p>32/2 = 16 remainder = <b>0</b></p>
-
-<p>16/2&nbsp;= 8 &nbsp;&nbsp;remainder = <b>0</b></p>
-
-<p>8/2&nbsp;&nbsp;&nbsp;= 4 &nbsp;&nbsp;remainder = <b>0</b></p>
-
-<p>4/2&nbsp;&nbsp;&nbsp;= 3 &nbsp;&nbsp;remainder = <b>0</b></p>
-
-<p>2/2&nbsp;&nbsp; = 1 &nbsp;&nbsp;remainder = <b>0</b></p>
-
-<p>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remainder = <b>1</b></p>
-
-<p>Binary code for &ldquo;A&rdquo; is <b>1000001</b>.</p>
-
-<p>And the binary code for a string like &lsquo;Hello World&rsquo; is&hellip;</p>
-
-<p>01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100</p>
-
-<p>I found it fascinating that everything we input into a computer is at the end read and understood by the computer as a long long string of 0&rsquo;s and 1&rsquo;s.</p>
-
-<p><a href="http://binarytranslator.com/">http://binarytranslator.com/</a></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-10-17T18:24:03-04:00" pubdate data-updated="true"></time></div>
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
 	
-
-<div class="tags">
-
-	<a class='category' href='/blog/categories/flatiron-school/'>flatiron&nbsp;school</a>
-
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> --->
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
 </div>
 
 
-	
-</div></article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2015/09/28/my-first-post-on-octopress/">
-		
-			My First Blog Post</a>
-	</h2>
-	<div class="entry-content">
-		<p>Hello =D</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-09-28T17:55:42-04:00" pubdate data-updated="true"></time></div>
-	
-
-<div class="tags">
-
-	<a class='category' href='/blog/categories/flatiron-school/'>flatiron&nbsp;school</a>
-
 </div>
-
-
-	
-</div></article>
-
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/archives">Blog Archives</a></div>
-</nav></div>
 	<footer id="footer" class="inner">Copyright &copy; 2015
 
     May Lee

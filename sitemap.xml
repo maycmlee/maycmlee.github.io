@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://maycmlee.github.io/blog/2015/11/03/yelp-api/</loc>
+    <lastmod>2015-11-03T20:18:32-05:00</lastmod>
+  </url>
+  <url>
     <loc>http://maycmlee.github.io/blog/2015/10/17/what-it-all-comes-down-to-dot-dot-dot-binary-code/</loc>
     <lastmod>2015-10-17T18:24:03-04:00</lastmod>
   </url>

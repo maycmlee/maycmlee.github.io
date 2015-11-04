@@ -4,7 +4,7 @@
   <title><![CDATA[My Beginnings as a Web Developer]]></title>
   <link href="http://maycmlee.github.io/atom.xml" rel="self"/>
   <link href="http://maycmlee.github.io/"/>
-  <updated>2015-10-18T21:20:21-04:00</updated>
+  <updated>2015-11-03T23:19:02-05:00</updated>
   <id>http://maycmlee.github.io/</id>
   <author>
     <name><![CDATA[May Lee]]></name>
@@ -12,6 +12,47 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Yelp API keys and tokens....oops]]></title>
+    <link href="http://maycmlee.github.io/blog/2015/11/03/yelp-api/"/>
+    <updated>2015-11-03T20:18:32-05:00</updated>
+    <id>http://maycmlee.github.io/blog/2015/11/03/yelp-api</id>
+    <content type="html"><![CDATA[<p>For our project, we&rsquo;re using a Yelp API to help us find restaurants in a specific neighborhood.  To get access to the API we generated keys and tokens from Yelp&rsquo;s developer website.</p>
+
+<p><img src="images/yelp_secret.png"></p>
+
+<p>These keys and tokens allow us to make a HTTP request to the Yelp API to get the information we want.</p>
+
+<p>To keep these API keys safe, we first stored them in a separate YAML file called <b>application.yml</b>.</p>
+
+<p>Inside application.yml:<br><br>
+<img src="images/yaml_file.png"></p>
+
+<p>And then we can created a <b>.gitignore</b> file that lists our <b>application.yml</b> in it.  Doing this allows us to keep application.yml from being pushed up to GitHub and keep people from getting a hold of our API keys.  A <b>.gitignore</b> file contains a list of files that are not to be pushed up to GitHub.</p>
+
+<p>So now when we want to make a request to our API, we have to first <b> load </b> the file <b>application.yaml</b>.<br><br>
+<img src="images/load_yaml.png"></p>
+
+<p>&hellip;which gives us a hash of our API keys and tokens <br><br></p>
+
+<p><img src="images/keys.png"></p>
+
+<p>&hellip;and then we make the actual request to the API by sending over our API keys as key-value pairs from our hash. <br><br>
+<img src="images/protected.png"></p>
+
+<p>However, because we wanted to see if we could just get the API code working, we decided to hardcode the keys in&hellip;<br><br>
+<img src="images/hardcoded.png"></p>
+
+<p>Then an hour or so later&hellip;.we got the API working and were able to get the information we were looking for from Yelp.  Yay!  git add. git commit.  git push.  OOPS.  We had just completely exposed our API keys to everyone.</p>
+
+<p>How to resolve this problem?  The problem with just fixing our code and hiding our API keys, then pushing it up to GitHub, is that all of our previous git commits still contain those keys.  So, the best thing to do was to destroy those keys and generate new ones.  And not expose them.</p>
+
+<p>Our case, hopefully, was not too serious. However, there have been a number of cases where programmers who used Amazon Web Services (AWS) had mistakenly published their tokens on GitHub and ended up with large bills.  One programmer using AWS had realized his mistake five minutes after commiting his files to GitHub.  He immediately reverted his last few commits and deleted all traces of his keys from GitHub.  But the next morning he had four emails from Amazon AWS, a missed phone call from them and 140 servers running on his AWS account.  Along with a bill for $2375.  Luckily, when he explained the situation to Amazon customer support, they dropped the charges.</p>
+
+<p>You can find the full story here: <a href="http://www.devfactor.net/2014/12/30/2375-amazon-mistake/"> My $2375 Amazon EC2 Mistake.</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What it all comes down to...Binary Code]]></title>
