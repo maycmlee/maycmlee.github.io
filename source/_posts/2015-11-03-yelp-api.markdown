@@ -16,25 +16,25 @@ To keep these API keys safe, we first stored them in a separate YAML file called
 Inside application.yml:<br><br>
 <img src="images/yaml_file.png">
 
-And then we can created a <b>.gitignore</b> file that lists our <b>application.yml</b> in it.  Doing this allows us to keep application.yml from being pushed up to GitHub and keep people from getting a hold of our API keys.  A <b>.gitignore</b> file contains a list of files that are not to be pushed up to GitHub.  
+And then we can created a <b>.gitignore</b> file that lists our <b>application.yml</b> in it.  Doing this allowed us to keep application.yml from being pushed up to GitHub and keep people from getting a hold of our API keys.  A <b>.gitignore</b> file contains a list of files that are not to be pushed up to GitHub.  
 
-So now when we want to make a request to our API, we have to first <b> load </b> the file <b>application.yaml</b>.<br><br>
+So when we wanted to make a request to our API, we had to first <b> load </b> the file <b>application.yaml</b>.<br><br>
 <img src="images/load_yaml.png">
 
-...which gives us a hash of our API keys and tokens <br><br>
+...which gave us a hash of our API keys and tokens: <br><br>
 
 <img src="images/keys.png">
 
-...and then we make the actual request to the API by sending over our API keys as key-value pairs from our hash. <br><br>
+...and then we made the actual request to the API by sending over our API keys as key-value pairs from our hash. <br><br>
 <img src="images/protected.png">
 
-However, because we wanted to see if we could just get the API code working, we decided to hardcode the keys in...<br><br>
+However, because we wanted to see if we could just get the API code working, we decided to hardcode the keys in first...<br><br>
 <img src="images/hardcoded.png">
 
 Then an hour or so later....we got the API working and were able to get the information we were looking for from Yelp.  Yay!  git add. git commit.  git push.  OOPS.  We had just completely exposed our API keys to everyone.
 
-How to resolve this problem?  The problem with just fixing our code and hiding our API keys, then pushing it back up to GitHub, is that all of our previous git commits still contain those keys.  So, the best thing to do was to destroy those keys and generate new ones.  And not expose them again.
+So now, how do we resolve this problem?  The problem with just fixing our code, hiding our API keys, and then pushing the code back up to GitHub was that all of our previous git commits still contained those keys.  So, the best thing to do was to destroy those keys and generate new ones.  And not expose them again.
 
-Our case, hopefully, was not too serious. However, there have been a number of cases where programmers who used Amazon Web Services (AWS) had mistakenly published their tokens on GitHub and ended up getting their accounts hacked into.  One programmer using AWS had realized his mistake five minutes after commiting his files to GitHub.  He immediately reverted his last few commits and deleted all traces of his keys from GitHub.  But the next morning he had four emails from Amazon AWS, a missed phone call from them and 140 servers running on his AWS account, along with a bill for $2375.  Luckily, when he explained the situation to Amazon customer support, they dropped the charges.
+Our case was not too serious, hopefully. However, there have been a number of cases where programmers who used Amazon Web Services (AWS) had mistakenly published their tokens on GitHub and ended up getting their accounts hacked into.  One programmer using AWS realized his keys were revealed in his code just five minutes after he commited his files to GitHub.  So he immediately reverted his last few commits and deleted all traces of his keys from GitHub.  But the next morning he had four emails from Amazon AWS, a missed phone call from them and 140 servers running on his AWS account, along with a bill for $2375.  So his keys were discovered within those five minutes they were exposed on GitHub.  Luckily, when he explained the situation to Amazon customer support, they dropped the charges.
 
 You can find the full story here: <a href="http://www.devfactor.net/2014/12/30/2375-amazon-mistake/"> My $2375 Amazon EC2 Mistake.</a>
