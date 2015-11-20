@@ -5,7 +5,7 @@
 	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
 	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="utf-8">
-	<title>Yelp API keys and tokens....oops  | My Beginnings as a Web Developer</title>
+	<title>Transpilers or Source-to-Source Compilers  | My Beginnings as a Web Developer</title>
 
 <meta name="author" content="May Lee"> 
 
@@ -97,40 +97,33 @@ $(document).ready(
 </header>
 
 	<div id="content" class="inner"><article class="post">
-	<h2 class="title">Yelp API Keys and tokens....oops</h2>
-	<div class="entry-content"><p>For our project, we&rsquo;re using a Yelp API to help us find restaurants in a specific neighborhood.  To get access to the API we generated keys and tokens from Yelp&rsquo;s developer website.</p>
+	<h2 class="title">Transpilers or Source-to-Source Compilers</h2>
+	<div class="entry-content"><p>Yesterday before we started learning Ember we were given a crash course in Babel, a transpiler or transcompiler, for Javascript.  I had never heard of transpilers so decided to look a little more into them.</p>
 
-<p><img src="images/yelp_secret.png"></p>
+<p><b>Transpilers</b> are also known as <b>source-to-source compilers</b>, meaning they translate the source code of a program written in one language to source code written in another language.  These two source code languages have a similar levels of abstraction and are both higher-level languages, like Ruby, Python, or JavaScript.</p>
 
-<p>These keys and tokens allow us to make a HTTP request to the Yelp API to get the information we want.</p>
+<center><img src= "http://qph.is.quoracdn.net/main-qimg-13f269ab119b5c97abf0ad52c57fffac?convert_to_webp=true">
+<br><small>Source: <a href ="http://softwareengineeringdaily.com/2015/07/30/transpiler-tradeoffs-typescript-coffeescript-es6/">Software Engineering Daily</a></small></center>
 
-<p>To keep these API keys safe, we first stored them in a separate YAML file called <b>application.yml</b>.</p>
 
-<p>Inside application.yml:<br><br>
-<img src="images/yaml_file.png"></p>
+<p></center></p>
 
-<p>And then we can created a <b>.gitignore</b> file that lists our <b>application.yml</b> in it.  Doing this allowed us to keep application.yml from being pushed up to GitHub and keep people from getting a hold of our API keys.  A <b>.gitignore</b> file contains a list of files that are not to be pushed up to GitHub.</p>
+<p>A <b>compiler</b>, on the other hand, translates the source code of a high-level language program to a low-level language, such as machine code, which is understood by the computer&rsquo;s CPU.</p>
 
-<p>So when we wanted to make a request to our API, we had to first <b> load </b> the file <b>application.yaml</b>.<br><br>
-<img src="images/load_yaml.png"></p>
+<center><img src="images/high-to-low-level-languages.png" width=250px>
+<br><small>Source: <a href ="http://learntocodewith.me/programming/source-code">Learn to Code With Me</a></small></center>
 
-<p>&hellip;which gave us a hash of our API keys and tokens: <br><br></p>
 
-<p><img src="images/keys.png"></p>
+<p>CoffeeScript, TypeScript, Dart, ECMAScript 6 or ES6 (transcompiled using Babel) are just a couple of languages that transpiles to JavaScript.</p>
 
-<p>&hellip;and then we made the actual request to the API by sending over our API keys as key-value pairs from our hash. <br><br>
-<img src="images/protected.png"></p>
+<p>Why use transpilers?  It seems that one main reason is so that you don&rsquo;t have to wait for browsers to be updated to start using certain new features.  Transpilers also allows code to be translated into a version of JavaScript that is compatible.</p>
 
-<p>However, because we wanted to see if we could just get the API code working, we decided to hardcode the keys in first&hellip;<br><br>
-<img src="images/hardcoded.png"></p>
+<p>Different transpilers also offer different benefits.  For example, CoffeeScript has similarties to Ruby and Python and implments some of the features from those two languages.  So if you know Ruby or Python then CoffeeScript might feel more familiar and be easier for writing JavaScript programs.</p>
 
-<p>Then an hour or so later&hellip;.we got the API working and were able to get the information we were looking for from Yelp.  Yay!  git add. git commit.  git push.  OOPS.  We had just completely exposed our API keys to everyone.</p>
+<p>Typescript is a superset of JavaScript which means that any JavaScript code you write would work but it offers more object oriented programming features than JavaScript alone.  Typescript has similarities to Java and C# so would be easier to program in if you already know those languages.</p>
 
-<p>So, how do we resolve this problem?  The problem with just fixing our code, hiding our API keys, and then pushing the code back up to GitHub was that all of our previous git commits still contained those keys.  So, the best thing to do was to destroy those keys and generate new ones.  And not expose them again.</p>
-
-<p>Our case was not too serious, hopefully. However, there have been a number of cases where programmers who used Amazon Web Services (AWS) had mistakenly published their tokens on GitHub and ended up getting their accounts hacked into.  One programmer using AWS realized his keys were revealed in his code just five minutes after he commited his files to GitHub.  So he immediately reverted his last few commits and deleted all traces of his keys from GitHub.  But the next morning he had four emails from Amazon AWS, a missed phone call from them and 140 servers running on his AWS account, along with a bill for $2375.  So his keys were discovered within those five minutes they were exposed on GitHub.  Luckily, when he explained the situation to Amazon customer support, they dropped the charges.</p>
-
-<p>You can find the full story here: <a href="http://www.devfactor.net/2014/12/30/2375-amazon-mistake/"> My $2375 Amazon EC2 Mistake.</a></p>
+<p>For more pros and cons of different JavaScript transpilers: <a href = "http://jessewarden.com/2015/02/javascript-transpiled-languages.html">
+JavaScript Transpiled Languages</a></p>
 </div>
 
 
@@ -147,14 +140,8 @@ $(document).ready(
   
 
 
-<time datetime="2015-11-03T20:18:32-05:00" pubdate data-updated="true"></time></div>
+<time datetime="2015-11-19T20:32:10-05:00" pubdate data-updated="true"></time></div>
 	
-
-<div class="tags">
-
-	<a class='category' href='/blog/categories/flatiron-school/'>flatiron&nbsp;school</a>
-
-</div>
 
 
 	
