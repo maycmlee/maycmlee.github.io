@@ -33,7 +33,7 @@ However, because we wanted to see if we could just get the API code working, we 
 
 Then an hour or so later....we got the API working and were able to get the information we were looking for from Yelp.  Yay!  git add. git commit.  git push.  OOPS.  We had just completely exposed our API keys to everyone.
 
-So now, how do we resolve this problem?  The problem with just fixing our code, hiding our API keys, and then pushing the code back up to GitHub was that all of our previous git commits still contained those keys.  So, the best thing to do was to destroy those keys and generate new ones.  And not expose them again.
+So, how do we resolve this problem?  The problem with just fixing our code, hiding our API keys, and then pushing the code back up to GitHub was that all of our previous git commits still contained those keys.  So, the best thing to do was to destroy those keys and generate new ones.  And not expose them again.
 
 Our case was not too serious, hopefully. However, there have been a number of cases where programmers who used Amazon Web Services (AWS) had mistakenly published their tokens on GitHub and ended up getting their accounts hacked into.  One programmer using AWS realized his keys were revealed in his code just five minutes after he commited his files to GitHub.  So he immediately reverted his last few commits and deleted all traces of his keys from GitHub.  But the next morning he had four emails from Amazon AWS, a missed phone call from them and 140 servers running on his AWS account, along with a bill for $2375.  So his keys were discovered within those five minutes they were exposed on GitHub.  Luckily, when he explained the situation to Amazon customer support, they dropped the charges.
 
