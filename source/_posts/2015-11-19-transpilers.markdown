@@ -20,13 +20,15 @@ A <b>compiler</b>, on the other hand, translates the source code of a high-level
 <center><img src="images/high-to-low-level-languages.png" width=250px>
 <br><small>Source: <a href ="http://learntocodewith.me/programming/source-code">Learn to Code With Me</a></small></center>
 
-CoffeeScript, TypeScript, Dart, ECMAScript 6 or ES6 (transcompiled using Babel) are just a couple of languages that transpiles to JavaScript.
+CoffeeScript, TypeScript, Dart, ECMAScript 6 (ES6) are just a couple of languages that transpile to JavaScript.
 
-Why use transpilers?  It seems that one main reason is so that you don't have to wait for browsers to be updated to start using certain new features because transpilers allows code to be translated into older versions of JavaScript.
+Why use a JavaScript transpiler?  
 
-Different transpilers also offer different benefits.  For example, CoffeeScript has similarties to Ruby and Python and implments some of the features from those two languages.  So if you know Ruby or Python then CoffeeScript might feel more familiar and be easier for writing JavaScript programs. 
+Different transpilers also offer different advantages.  For example, CoffeeScript has similarties to Ruby and Python and implments some of the features from those two languages.  So if you know Ruby or Python then CoffeeScript might feel more familiar and be easier for writing JavaScript programs. 
 
 Typescript, another example, is a superset of JavaScript which means that any JavaScript code you write would work with it, but Typescript offers more object oriented programming features than JavaScript alone.  Also, Typescript has similarities to Java and C# so would be easier to program in if you already know those languages.
+
+ES6 is JavaScript compiled to JavaScript, but with many additional features that have just been approved in June by ECMA International.  ES5, the previous version, was approved back in 2009 so major improvements and new features can be found in ES6.  However, even though these new features have been approved, it will take time for browser developers to update their browsers so that ES6 features can be used.  But even so, if web developers want to start using these new features they can do so because Babel transpiles ES6 back to ES5.
 
 For more pros and cons of different JavaScript transpilers: <a href = "http://jessewarden.com/2015/02/javascript-transpiled-languages.html">
 JavaScript Transpiled Languages</a>
