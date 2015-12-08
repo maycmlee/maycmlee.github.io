@@ -4,7 +4,7 @@
   <title><![CDATA[My Beginnings as a Web Developer]]></title>
   <link href="http://maycmlee.github.io/atom.xml" rel="self"/>
   <link href="http://maycmlee.github.io/"/>
-  <updated>2015-12-07T22:55:23-05:00</updated>
+  <updated>2015-12-08T09:18:05-05:00</updated>
   <id>http://maycmlee.github.io/</id>
   <author>
     <name><![CDATA[May Lee]]></name>
@@ -47,6 +47,12 @@
 <p>I don&rsquo;t really want to commit my test code yet because it&rsquo;s only half done. So, instead, I can take a snapshot of my current work using <code>git stash</code>.</p>
 
 <p>By doing <code>git stash</code> you save your work on your local directory and clear out your working directory.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Saved working directory and index state WIP on new_feature: fb67f7a This is a test
+</span><span class='line'>HEAD is now at fb67f7a another test</span></code></pre></td></tr></table></div></figure>
+
 
 <p>After fixing the bug, to get back the work I was doing before I just have to use <code>git pop</code>, which gives me the most recent work I have stashed.</p>
 
