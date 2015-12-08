@@ -30,6 +30,11 @@ I don't really want to commit my test code yet because it's only half done. So, 
 
 By doing ```git stash``` you save your work on your local directory and clear out your working directory.
 
+```
+Saved working directory and index state WIP on new_feature: fb67f7a This is a test
+HEAD is now at fb67f7a another test
+```
+
 After fixing the bug, to get back the work I was doing before I just have to use ```git pop```, which gives me the most recent work I have stashed.
 
 To stash with a message you can do... 
