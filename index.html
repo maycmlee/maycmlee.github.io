@@ -102,6 +102,84 @@ $(document).ready(
     <article class="post">
 	<h2 class="title">
 		
+		<a href="/blog/2015/12/06/git-stash/">
+		
+			Git Stash</a>
+	</h2>
+	<div class="entry-content">
+		<p>We started our second project mode last week.  Compared to the first project mode I&rsquo;m feeling more comfortable with using Github.  Here, I just wanted to go over the <b>git stash</b> command because I&rsquo;ve found it really helpful when I need to put a feature I&rsquo;m working on on hold to work on something else.</p>
+
+<p>So, for example, say I&rsquo;m trying to write a new feature, but was asked to fix a bug in another part of the code.</p>
+
+<p>So if I did <code>git status</code></p>
+
+<p>I get&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>On branch new_feature
+</span><span class='line'>Changes not staged for commit:
+</span><span class='line'>  (use "git add &lt;file&gt;..." to update what will be committed)
+</span><span class='line'>  (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+</span><span class='line'>
+</span><span class='line'>  modified:   app/models/country.rb
+</span><span class='line'>
+</span><span class='line'>no changes added to commit (use "git add" and/or "git commit -a")</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I don&rsquo;t really want to commit my test code yet because it&rsquo;s only half done. So, instead, I can do <code>git stash</code> which is like a &lsquo;pause button&rsquo; for your current work.</p>
+
+<p>By doing <code>git stash</code> you save your work on your local directory and clear out your working directory.</p>
+
+<p>After fixing the bug, to get back the work I was doing before I just have to use <code>git pop</code>, which gives me the most recent work I have stashed.</p>
+
+<p>You can also stash more than one work-in-progress and git the list of stashed by using <code>git stash list</code></p>
+
+<p>You can see all of your stashes by using <code>git stash list</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>stash@{0}: WIP on new-feature: 5cedccc Write new feature
+</span><span class='line'>stash@{1}: WIP on new-feature: 9f44b34 Try different method
+</span><span class='line'>stash@{2}: WIP on new-feature: 5acd291 Start new feature</span></code></pre></td></tr></table></div></figure>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-12-06T11:23:00-05:00" pubdate data-updated="true"></time></div>
+	
+
+
+	
+</div></article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
 		<a href="/blog/2015/11/19/transpilers/">
 		
 			Transpilers or Source-to-Source Compilers</a>

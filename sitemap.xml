@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://maycmlee.github.io/blog/2015/12/06/git-stash/</loc>
+    <lastmod>2015-12-06T11:23:00-05:00</lastmod>
+  </url>
+  <url>
     <loc>http://maycmlee.github.io/blog/2015/11/19/transpilers/</loc>
     <lastmod>2015-11-19T20:32:10-05:00</lastmod>
   </url>
