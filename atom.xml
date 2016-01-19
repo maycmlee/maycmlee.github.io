@@ -4,7 +4,7 @@
   <title><![CDATA[My Beginnings as a Web Developer]]></title>
   <link href="http://maycmlee.github.io/atom.xml" rel="self"/>
   <link href="http://maycmlee.github.io/"/>
-  <updated>2016-01-19T17:31:36-05:00</updated>
+  <updated>2016-01-19T17:33:29-05:00</updated>
   <id>http://maycmlee.github.io/</id>
   <author>
     <name><![CDATA[May Lee]]></name>
@@ -209,15 +209,6 @@ JavaScript Transpiled Languages</a></p>
 <p>I found it fascinating that everything we input into a computer is at the end read and understood by the computer as a long long string of 0&rsquo;s and 1&rsquo;s.</p>
 
 <p><a href="http://binarytranslator.com/">http://binarytranslator.com/</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My First Blog Post]]></title>
-    <link href="http://maycmlee.github.io/blog/2015/09/28/my-first-post-on-octopress/"/>
-    <updated>2015-09-28T17:55:42-04:00</updated>
-    <id>http://maycmlee.github.io/blog/2015/09/28/my-first-post-on-octopress</id>
-    <content type="html"><![CDATA[<p>Hello =D</p>
 ]]></content>
   </entry>
   
