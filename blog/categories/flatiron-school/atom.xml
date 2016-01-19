@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: flatiron&nbsp;school | My Beginnings as a Web Developer]]></title>
+  <title><![CDATA[Category: Flatiron&nbsp;school | My Beginnings as a Web Developer]]></title>
   <link href="http://maycmlee.github.io/blog/categories/flatiron-school/atom.xml" rel="self"/>
   <link href="http://maycmlee.github.io/"/>
-  <updated>2015-12-08T09:18:05-05:00</updated>
+  <updated>2016-01-19T17:31:36-05:00</updated>
   <id>http://maycmlee.github.io/</id>
   <author>
     <name><![CDATA[May Lee]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Yelp API keys and tokens....oops]]></title>
+    <title type="html"><![CDATA[Yelp API Keys and tokens....oops]]></title>
     <link href="http://maycmlee.github.io/blog/2015/11/03/yelp-api/"/>
     <updated>2015-11-03T20:18:32-05:00</updated>
     <id>http://maycmlee.github.io/blog/2015/11/03/yelp-api</id>
@@ -55,7 +55,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[What it all comes down to...Binary Code]]></title>
+    <title type="html"><![CDATA[What It All Comes Down to...Binary Code]]></title>
     <link href="http://maycmlee.github.io/blog/2015/10/17/what-it-all-comes-down-to-dot-dot-dot-binary-code/"/>
     <updated>2015-10-17T18:24:03-04:00</updated>
     <id>http://maycmlee.github.io/blog/2015/10/17/what-it-all-comes-down-to-dot-dot-dot-binary-code</id>
