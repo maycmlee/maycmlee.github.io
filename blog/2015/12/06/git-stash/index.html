@@ -98,7 +98,7 @@
   </header>
 
 
-<div class="entry-content"><p>We started our second project mode last week and I&rsquo;d like to talk about <b>git stash</b>, which I&rsquo;ve found really helpful for when I need to put something I&rsquo;m working on on hold to work on something else.</p>
+<div class="entry-content"><p>We started our second project mode last week and I&rsquo;d like to talk about <em><strong>git stash</strong></em>, which I&rsquo;ve found really helpful for when I need to put something I&rsquo;m working on on hold to work on something else.</p>
 
 <p>So, for example, say I&rsquo;m trying to write a new feature, but was asked to fix a bug in another part of the code.</p>
 
@@ -138,15 +138,31 @@
 
 <p>To stash with a message you can do&hellip;</p>
 
-<p><code>git stash save "This is a test"</code></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git stash save "This is a test"</span></code></pre></td></tr></table></div></figure>
 
-<p>You can also stash more than one work-in-progress.  And to get a list of all of your stashes you can use <code>git stash list</code>, which gives you&hellip;</p>
 
-<p>stash@{0}: WIP on new-feature: 5cedcc This is a test<br>
-stash@{1}: WIP on new-feature: 9f4434 Try different method<br>
-stash@{2}: WIP on new-feature: 5acd291 Start new feature<br></p>
+<p>You can also stash more than one work-in-progress.  And to get a list of all of your stashes you can use</p>
 
-<p><b>git pop</b> only gives you the most recent stash so if you wanted to get <b>stash@{1}</b> you would do <b>git stash apply stash@{1}</b></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git stash list</span></code></pre></td></tr></table></div></figure>
+
+
+<p>&hellip;which gives you&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>stash@{0}: WIP on new-feature: 5cedcc This is a test
+</span><span class='line'>stash@{1}: WIP on new-feature: 9f4434 Try different method
+</span><span class='line'>stash@{2}: WIP on new-feature: 5acd291 Start new feature</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em><strong>git pop</strong></em> only gives you the most recent stash so if you wanted to get <em><strong>stash@{1}</strong></em> you would do</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git stash apply stash@{1}</span></code></pre></td></tr></table></div></figure>
+
 
 <p>This has been really helpful when I&rsquo;m trying to solve a problem but want to try different methods. So I can try one method, stash it and try another method and then use the one I want.</p>
 </div>
@@ -191,6 +207,8 @@ stash@{2}: WIP on new-feature: 5acd291 Start new feature<br></p>
       
         <a class="basic-alignment left" href="/blog/2015/11/19/transpilers/" title="Previous Post: Transpilers or Source-to-Source Compilers">&laquo; Transpilers or Source-to-Source Compilers</a>
       
+      
+        <a class="basic-alignment right" href="/blog/2015/12/30/using-imagemagick-and-rmagick-gem/" title="Next Post: Using ImageMagick and RMagick Gem">Using ImageMagick and RMagick Gem &raquo;</a>
       
     </p>
   </footer>
