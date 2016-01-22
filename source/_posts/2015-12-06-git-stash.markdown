@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 
-We started our second project mode last week and I'd like to talk about <b>git stash</b>, which I've found really helpful for when I need to put something I'm working on on hold to work on something else.
+We started our second project mode last week and I'd like to talk about *__git stash__*, which I've found really helpful for when I need to put something I'm working on on hold to work on something else.
 
 So, for example, say I'm trying to write a new feature, but was asked to fix a bug in another part of the code.  
 
@@ -39,15 +39,26 @@ After fixing the bug, to get back the work I was doing before I just have to use
 
 To stash with a message you can do... 
 
-```git stash save "This is a test"```
+```
+git stash save "This is a test"
+```
 
-You can also stash more than one work-in-progress.  And to get a list of all of your stashes you can use ```git stash list```, which gives you...
+You can also stash more than one work-in-progress.  And to get a list of all of your stashes you can use 
 
+```
+git stash list
+```
 
-stash@{0}: WIP on new-feature: 5cedcc This is a test<br>
-stash@{1}: WIP on new-feature: 9f4434 Try different method<br>
-stash@{2}: WIP on new-feature: 5acd291 Start new feature<br>
+...which gives you...
 
-<b>git pop</b> only gives you the most recent stash so if you wanted to get <b>stash@{1}</b> you would do <b>git stash apply stash@{1}</b>
+{% codeblock %}
+stash@{0}: WIP on new-feature: 5cedcc This is a test
+stash@{1}: WIP on new-feature: 9f4434 Try different method
+stash@{2}: WIP on new-feature: 5acd291 Start new feature
+{% endcodeblock %}
 
+*__git pop__* only gives you the most recent stash so if you wanted to get *__stash@{1}__* you would do
+```
+git stash apply stash@{1}
+```
 This has been really helpful when I'm trying to solve a problem but want to try different methods. So I can try one method, stash it and try another method and then use the one I want.
