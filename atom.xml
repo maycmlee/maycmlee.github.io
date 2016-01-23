@@ -4,7 +4,7 @@
   <title><![CDATA[My Beginnings as a Web Developer]]></title>
   <link href="http://maycmlee.github.io/atom.xml" rel="self"/>
   <link href="http://maycmlee.github.io/"/>
-  <updated>2016-01-22T20:26:42-05:00</updated>
+  <updated>2016-01-22T20:41:48-05:00</updated>
   <id>http://maycmlee.github.io/</id>
   <author>
     <name><![CDATA[May Lee]]></name>
@@ -14,11 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Using ImageMagick and RMagick Gem]]></title>
+    <title type="html"><![CDATA[Resizing Images Using the RMagick Gem]]></title>
     <link href="http://maycmlee.github.io/blog/2015/12/30/using-imagemagick-and-rmagick-gem/"/>
     <updated>2015-12-30T17:48:27-05:00</updated>
     <id>http://maycmlee.github.io/blog/2015/12/30/using-imagemagick-and-rmagick-gem</id>
-    <content type="html"><![CDATA[<p>The other day I was trying to find a way to create a collage of photos that I had found using the Flickr API.  Scouring around the web I found the RMagick Ruby gem.</p>
+    <content type="html"><![CDATA[<p>The other day I was trying to find a way to resize photos that I found using the Flickr API.  Scouring around the web I found the RMagick Ruby gem.</p>
 
 <p>To user RMagick, however, you had to first install ImageMagick, which actually does all of the image manipulation.  RMagick just provides a easier user interface.</p>
 
@@ -65,13 +65,13 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Line 2 creates a new directory named &ldquo;images&rdquo; if it doesn&rsquo;t already exist.  This is the folder where all the images are downloaded to.</p>
+<p>Line 2 creates a new directory called &ldquo;images&rdquo; if it doesn&rsquo;t already exist.  All the images are downloaded into this folder.</p>
 
 <p>In line 3, <strong>url</strong> is the url to the flickr image.</p>
 
 <p>In line 4, <strong>photo_path</strong> is the path to the downloaded photo image.  For example: images/img_0.jpg.</p>
 
-<p>To create the collage I wanted to make sure the images were all the same size so I wrote a method to resize the images&hellip;</p>
+<p>Then I wrote a method to resize the images&hellip;</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -80,8 +80,8 @@
 <span class='line-number'>5</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="k">def</span> <span class="nf">resize</span>
 </span><span class='line'>    <span class="n">image</span> <span class="o">=</span> <span class="no">Image</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">photo_path</span><span class="p">)</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
-</span><span class='line'>    <span class="n">resize</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">resize_to_fill</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">resize</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">self</span><span class="o">.</span><span class="n">photo_path</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">resize</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">resize_to_fill</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">resize</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">photo_path</span><span class="p">)</span>
 </span><span class='line'>  <span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -92,9 +92,12 @@
 
 <p>Here I used the method <code>resize_to_fill()</code>.  From the Rmagick documentation, this method &ldquo;resizes the image to fit within the specified dimensions while retaining the aspect ratio of the original image. If necessary, crop the image in the larger dimension.</p>
 
-<p>Here is the original:
-<img src="http://maycmlee.github.io/images/rmagick_post/img_original.jpg">
+<p>Here are the photos.  Left is the original.  Right is the resized one.</p>
+
+<p><img src="http://maycmlee.github.io/images/rmagick_post/img_original.jpg">
 <img src="http://maycmlee.github.io/images/rmagick_post/img_resize.jpg"></p>
+
+<p>Have fun!</p>
 ]]></content>
   </entry>
   
