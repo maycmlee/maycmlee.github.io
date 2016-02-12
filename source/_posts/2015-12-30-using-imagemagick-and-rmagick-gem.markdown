@@ -62,7 +62,7 @@ Then I wrote a method to resize the images...
 
 In line 2, ```Image.read(photo_path)``` opens the image file with RMagick.  It returns a collection and ask for the first element.
 
-The ```image``` variable is is a RMagick Image object.  We can now use Image object methods to manipulate the image.
+The ```image``` variable is a RMagick Image object.  We can now use Image object methods to manipulate the image.
 
 Here I used the method ```resize_to_fill()```.  From the Rmagick documentation, this method "resizes the image to fit within the specified dimensions while retaining the aspect ratio of the original image. If necessary, crop the image in the larger dimension.
 
