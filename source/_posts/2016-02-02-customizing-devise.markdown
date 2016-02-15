@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Customizing Devise Gem"
+title: "Customizing the Devise Gem"
 date: 2016-01-29 20:39:40 -0500
 comments: true
 categories: 
