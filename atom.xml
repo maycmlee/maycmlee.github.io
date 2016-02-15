@@ -4,7 +4,7 @@
   <title><![CDATA[My Beginnings as a Web Developer]]></title>
   <link href="http://maycmlee.github.io/atom.xml" rel="self"/>
   <link href="http://maycmlee.github.io/"/>
-  <updated>2016-02-14T21:06:19-08:00</updated>
+  <updated>2016-02-14T21:08:00-08:00</updated>
   <id>http://maycmlee.github.io/</id>
   <author>
     <name><![CDATA[May Lee]]></name>
@@ -225,7 +225,7 @@ So in <code>app/views/devise/registrations/new.html.erb</code> we add the follow
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>In line 2, <code>Image.read(photo_path)</code> opens the image file with RMagick.  It returns a collection and ask for the first element.</p>
+<p>In line 2, <code>Image.read(photo_path)</code> opens the image file with RMagick.  It returns a collection and asks for the first element.</p>
 
 <p>The <code>image</code> variable is a RMagick Image object.  We can now use Image object methods to manipulate the image.</p>
 
