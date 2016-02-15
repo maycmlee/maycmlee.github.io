@@ -60,7 +60,7 @@ Then I wrote a method to resize the images...
   end
 {% endcodeblock %}
 
-In line 2, ```Image.read(photo_path)``` opens the image file with RMagick.  It returns a collection and ask for the first element.
+In line 2, ```Image.read(photo_path)``` opens the image file with RMagick.  It returns a collection and asks for the first element.
 
 The ```image``` variable is a RMagick Image object.  We can now use Image object methods to manipulate the image.
 
