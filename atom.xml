@@ -4,7 +4,7 @@
   <title><![CDATA[My Beginnings as a Web Developer]]></title>
   <link href="http://maycmlee.github.io/atom.xml" rel="self"/>
   <link href="http://maycmlee.github.io/"/>
-  <updated>2016-02-14T21:04:47-08:00</updated>
+  <updated>2016-02-14T21:06:19-08:00</updated>
   <id>http://maycmlee.github.io/</id>
   <author>
     <name><![CDATA[May Lee]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Customizing Devise Gem]]></title>
+    <title type="html"><![CDATA[Customizing the Devise Gem]]></title>
     <link href="http://maycmlee.github.io/blog/2016/01/29/customizing-devise/"/>
     <updated>2016-01-29T17:39:40-08:00</updated>
     <id>http://maycmlee.github.io/blog/2016/01/29/customizing-devise</id>
