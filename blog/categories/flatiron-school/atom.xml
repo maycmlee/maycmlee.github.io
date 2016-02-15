@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Flatiron&nbsp;school | My Beginnings as a Web Developer]]></title>
   <link href="http://maycmlee.github.io/blog/categories/flatiron-school/atom.xml" rel="self"/>
   <link href="http://maycmlee.github.io/"/>
-  <updated>2016-02-02T20:45:57-05:00</updated>
+  <updated>2016-02-14T21:04:47-08:00</updated>
   <id>http://maycmlee.github.io/</id>
   <author>
     <name><![CDATA[May Lee]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Yelp API Keys and tokens....oops]]></title>
     <link href="http://maycmlee.github.io/blog/2015/11/03/yelp-api/"/>
-    <updated>2015-11-03T20:18:32-05:00</updated>
+    <updated>2015-11-03T17:18:32-08:00</updated>
     <id>http://maycmlee.github.io/blog/2015/11/03/yelp-api</id>
     <content type="html"><![CDATA[<p>For our project, we&rsquo;re using a Yelp API to help us find restaurants in a specific neighborhood.  To get access to the API we generated keys and tokens from Yelp&rsquo;s developer website.</p>
 
@@ -57,7 +57,7 @@
   <entry>
     <title type="html"><![CDATA[What It All Comes Down to...Binary Code]]></title>
     <link href="http://maycmlee.github.io/blog/2015/10/17/what-it-all-comes-down-to-dot-dot-dot-binary-code/"/>
-    <updated>2015-10-17T18:24:03-04:00</updated>
+    <updated>2015-10-17T15:24:03-07:00</updated>
     <id>http://maycmlee.github.io/blog/2015/10/17/what-it-all-comes-down-to-dot-dot-dot-binary-code</id>
     <content type="html"><![CDATA[<p>While I was working on the &ldquo;Secret Handshake&rdquo; lab, I became interested in binary codes.  I knew vaguely that computers at the lowest level operated on a binary system, but I didn&rsquo;t quite understand what that meant. How does a computer understand what we are asking for when we run a program?  I decided to do a little investigation.</p>
 

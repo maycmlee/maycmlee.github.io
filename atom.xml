@@ -4,7 +4,7 @@
   <title><![CDATA[My Beginnings as a Web Developer]]></title>
   <link href="http://maycmlee.github.io/atom.xml" rel="self"/>
   <link href="http://maycmlee.github.io/"/>
-  <updated>2016-02-02T20:45:57-05:00</updated>
+  <updated>2016-02-14T21:04:47-08:00</updated>
   <id>http://maycmlee.github.io/</id>
   <author>
     <name><![CDATA[May Lee]]></name>
@@ -14,9 +14,148 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Customizing Devise Gem]]></title>
+    <link href="http://maycmlee.github.io/blog/2016/01/29/customizing-devise/"/>
+    <updated>2016-01-29T17:39:40-08:00</updated>
+    <id>http://maycmlee.github.io/blog/2016/01/29/customizing-devise</id>
+    <content type="html"><![CDATA[<p>Having built out the authentication system for the last project I worked on I decided to try out the Devise RubyGem this time.</p>
+
+<p>For this post, I&rsquo;m going to assume that you have already used Devise to setup a basic authentication system for a user to sign up, log in and log out. Devise is a Rails engine that sets up its authentication system by generating its own <code>views</code>.  To access these views we have to copy them from the Rails engine by entering this command&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate devise views</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now if you open your <code>views</code> folder you&rsquo;ll see all the views that Devise had created in a subfolder called <code>devise</code>&hellip;</p>
+
+<p><img src="http://maycmlee.github.io/images/devise_post/devise_views.png"></p>
+
+<p>So currently the sign up page looks something like this&hellip;</p>
+
+<p><img src="http://maycmlee.github.io/images/devise_post/signup.png"></p>
+
+<p>Right now, as you can see, the user password created is requred to have 8 characters.  So what if we just wanted it to have 6 characters?</p>
+
+<p>In <code>app/config/initializers/devise.rb</code> you&rsquo;ll see configurations options for Devise.</p>
+
+<p>There is one that is&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">password_length</span> <span class="o">=</span> <span class="mi">8</span><span class="o">.</span><span class="n">.</span><span class="mi">72</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>&hellip;and if we change the <code>8</code> to <code>6</code>&hellip;and go back to the Sign Up page, we see that the password requirement has now changed to 6 characters.</p>
+
+<p><img src="http://maycmlee.github.io/images/devise_post/signup_changed.png"></p>
+
+<p>Now let&rsquo;s say we want the user to be able to have a <code>username</code> and log in with that <code>username</code> instead of their email.  How do we do that?</p>
+
+<p>First we have to create a column in the <em><strong>user table</strong></em> for <code>username</code>&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails g migration add_username_to_users username:string</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:migrate</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next we want to add the <code>username</code> field on the Sign Up page.<br/>
+So in <code>app/views/devise/registrations/new.html.erb</code> we add the following code&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;div class="field">
+</span><span class='line'>  &lt;%= f.label :username %>&lt;br />
+</span><span class='line'>  &lt;%= f.text_field :username%>
+</span><span class='line'>&lt;/div></span></code></pre></td></tr></table></div></figure>
+
+
+<p>And our Sign Up now looks like this&hellip;</p>
+
+<p><img src="http://maycmlee.github.io/images/devise_post/signup_username.png"></p>
+
+<p>But our current Log In page still uses the email address to verify the user&hellip;</p>
+
+<p><img src="http://maycmlee.github.io/images/devise_post/login.png"></p>
+
+<p>So then if we want to use the <code>username</code> instead of <code>email</code> to log someone in we have to change the Devise configuration in <code>app/config/initializers/devise.rb</code>.  In that file you&rsquo;ll see this line commented out&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># config.authentication_keys = [:email]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To authenticate using <code>username</code> we have to uncomment this line and change it to be&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">authentication_keys</span> <span class="o">=</span> <span class="o">[</span><span class="ss">:username</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then opening up <code>app/views/devise/sessions/new.html.erb</code>, which is the Log In page, you&rsquo;ll see this block of code&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;div class="field">
+</span><span class='line'>  &lt;%= f.label :email %>&lt;br />
+</span><span class='line'>  &lt;%= f.email_field :email, autofocus: true %>
+</span><span class='line'>&lt;/div></span></code></pre></td></tr></table></div></figure>
+
+
+<p>and need to change <code>email</code> to <code>username</code>&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;div class="field">
+</span><span class='line'>  &lt;%= f.label :username %>&lt;br />
+</span><span class='line'>  &lt;%= f.email_field :username, autofocus: true %>
+</span><span class='line'>&lt;/div></span></code></pre></td></tr></table></div></figure>
+
+
+<p>However, because you can&rsquo;t use Devise&rsquo;s <code>:validatable</code> when using an authentication key that is not <code>:email</code> a couple of changes have to be made in <code>app/models/user.rb</code>.</p>
+
+<p>First, we have to comment out <code>:validatable</code> and then write out the validations for <code>username</code>&hellip;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="c1"># Include default devise modules. Others available are:</span>
+</span><span class='line'>  <span class="c1"># :confirmable, :lockable, :timeoutable and :omniauthable, :validatable</span>
+</span><span class='line'>  <span class="n">devise</span> <span class="ss">:database_authenticatable</span><span class="p">,</span> <span class="ss">:registerable</span><span class="p">,</span>
+</span><span class='line'>         <span class="ss">:recoverable</span><span class="p">,</span> <span class="ss">:rememberable</span><span class="p">,</span> <span class="ss">:trackable</span>
+</span><span class='line'>  <span class="n">validates_uniqueness_of</span> <span class="ss">:username</span>
+</span><span class='line'>  <span class="n">validates_presence_of</span> <span class="ss">:username</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> Sidenote: <code>lockable</code> and <code>confirmable</code> require an email field to work.</p>
+
+<p>The Log In page now looks like this&hellip;</p>
+
+<p><img src="http://maycmlee.github.io/images/devise_post/login_username.png"></p>
+
+<p> And you have a Devise user authentication system that logs users in with their <code>username</code>!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Resizing Images Using the RMagick Gem]]></title>
     <link href="http://maycmlee.github.io/blog/2015/12/30/using-imagemagick-and-rmagick-gem/"/>
-    <updated>2015-12-30T17:48:27-05:00</updated>
+    <updated>2015-12-30T14:48:27-08:00</updated>
     <id>http://maycmlee.github.io/blog/2015/12/30/using-imagemagick-and-rmagick-gem</id>
     <content type="html"><![CDATA[<p>The other day I was trying to find a way to resize photos that I found using the Flickr API.  Scouring around the web I found the RMagick Ruby gem.</p>
 
@@ -88,7 +227,7 @@
 
 <p>In line 2, <code>Image.read(photo_path)</code> opens the image file with RMagick.  It returns a collection and ask for the first element.</p>
 
-<p>The <code>image</code> variable is is a RMagick Image object.  We can now use Image object methods to manipulate the image.</p>
+<p>The <code>image</code> variable is a RMagick Image object.  We can now use Image object methods to manipulate the image.</p>
 
 <p>Here I used the method <code>resize_to_fill()</code>.  From the Rmagick documentation, this method &ldquo;resizes the image to fit within the specified dimensions while retaining the aspect ratio of the original image. If necessary, crop the image in the larger dimension.</p>
 
@@ -104,7 +243,7 @@
   <entry>
     <title type="html"><![CDATA[Git Stash]]></title>
     <link href="http://maycmlee.github.io/blog/2015/12/06/git-stash/"/>
-    <updated>2015-12-06T11:23:00-05:00</updated>
+    <updated>2015-12-06T08:23:00-08:00</updated>
     <id>http://maycmlee.github.io/blog/2015/12/06/git-stash</id>
     <content type="html"><![CDATA[<p>We started our second project mode last week and I&rsquo;d like to talk about <em><strong>git stash</strong></em>, which I&rsquo;ve found really helpful for when I need to put something I&rsquo;m working on on hold to work on something else.</p>
 
@@ -179,7 +318,7 @@
   <entry>
     <title type="html"><![CDATA[Transpilers or Source-to-Source Compilers]]></title>
     <link href="http://maycmlee.github.io/blog/2015/11/19/transpilers/"/>
-    <updated>2015-11-19T20:32:10-05:00</updated>
+    <updated>2015-11-19T17:32:10-08:00</updated>
     <id>http://maycmlee.github.io/blog/2015/11/19/transpilers</id>
     <content type="html"><![CDATA[<p>Yesterday before we started learning Ember we were given a crash course in Babel, a transpiler or transcompiler, for Javascript.  I had never heard of transpilers so decided to look a little more into them.</p>
 
@@ -215,7 +354,7 @@ JavaScript Transpiled Languages</a></p>
   <entry>
     <title type="html"><![CDATA[Yelp API Keys and tokens....oops]]></title>
     <link href="http://maycmlee.github.io/blog/2015/11/03/yelp-api/"/>
-    <updated>2015-11-03T20:18:32-05:00</updated>
+    <updated>2015-11-03T17:18:32-08:00</updated>
     <id>http://maycmlee.github.io/blog/2015/11/03/yelp-api</id>
     <content type="html"><![CDATA[<p>For our project, we&rsquo;re using a Yelp API to help us find restaurants in a specific neighborhood.  To get access to the API we generated keys and tokens from Yelp&rsquo;s developer website.</p>
 
@@ -256,7 +395,7 @@ JavaScript Transpiled Languages</a></p>
   <entry>
     <title type="html"><![CDATA[What It All Comes Down to...Binary Code]]></title>
     <link href="http://maycmlee.github.io/blog/2015/10/17/what-it-all-comes-down-to-dot-dot-dot-binary-code/"/>
-    <updated>2015-10-17T18:24:03-04:00</updated>
+    <updated>2015-10-17T15:24:03-07:00</updated>
     <id>http://maycmlee.github.io/blog/2015/10/17/what-it-all-comes-down-to-dot-dot-dot-binary-code</id>
     <content type="html"><![CDATA[<p>While I was working on the &ldquo;Secret Handshake&rdquo; lab, I became interested in binary codes.  I knew vaguely that computers at the lowest level operated on a binary system, but I didn&rsquo;t quite understand what that meant. How does a computer understand what we are asking for when we run a program?  I decided to do a little investigation.</p>
 

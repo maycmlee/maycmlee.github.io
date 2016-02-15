@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://maycmlee.github.io/blog/2016/01/29/customizing-devise/</loc>
+    <lastmod>2016-01-29T17:39:40-08:00</lastmod>
+  </url>
+  <url>
     <loc>http://maycmlee.github.io/blog/2015/12/30/using-imagemagick-and-rmagick-gem/</loc>
-    <lastmod>2015-12-30T17:48:27-05:00</lastmod>
+    <lastmod>2015-12-30T14:48:27-08:00</lastmod>
   </url>
   <url>
     <loc>http://maycmlee.github.io/blog/2015/12/06/git-stash/</loc>
-    <lastmod>2015-12-06T11:23:00-05:00</lastmod>
+    <lastmod>2015-12-06T08:23:00-08:00</lastmod>
   </url>
   <url>
     <loc>http://maycmlee.github.io/blog/2015/11/19/transpilers/</loc>
-    <lastmod>2015-11-19T20:32:10-05:00</lastmod>
+    <lastmod>2015-11-19T17:32:10-08:00</lastmod>
   </url>
   <url>
     <loc>http://maycmlee.github.io/blog/2015/11/03/yelp-api/</loc>
-    <lastmod>2015-11-03T20:18:32-05:00</lastmod>
+    <lastmod>2015-11-03T17:18:32-08:00</lastmod>
   </url>
   <url>
     <loc>http://maycmlee.github.io/blog/2015/10/17/what-it-all-comes-down-to-dot-dot-dot-binary-code/</loc>
-    <lastmod>2015-10-17T18:24:03-04:00</lastmod>
-  </url>
-  <url>
-    <loc>http://maycmlee.github.io/archives/</loc>
+    <lastmod>2015-10-17T15:24:03-07:00</lastmod>
   </url>
   <url>
     <loc>http://maycmlee.github.io/blog/archives/</loc>
+  </url>
+  <url>
+    <loc>http://maycmlee.github.io/archives/</loc>
   </url>
   <url>
     <loc>http://maycmlee.github.io/blog/</loc>
